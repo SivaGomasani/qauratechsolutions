@@ -1,0 +1,187 @@
+/* ================= GLOBAL ================= */
+html {
+  scroll-behavior: smooth; /* Smooth scroll */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: background 0.6s ease, padding 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  padding: 20px 0;
+}
+
+/* Transparent / Scrolled */
+.navbar.transparent {
+  background: transparent;
+}
+.navbar.scrolled {
+  background: linear-gradient(135deg, rgba(255,0,200,0.15), rgba(0,140,255,0.15));
+  box-shadow: 0 0 30px rgba(255,0,200,0.3);
+  padding: 14px 0;
+}
+
+/* ================= CONTAINER ================= */
+.nav-container {
+  width: 92%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= LOGO ================= */
+.logo-img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 12px rgba(255,0,200,0.6)) drop-shadow(0 0 20px rgba(0,140,255,0.6));
+}
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= NAV MENU ================= */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Links */
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s ease;
+  color: white;
+}
+.nav-link:hover {
+  background: linear-gradient(90deg, #ff00c8, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff00c8, #00bfff);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.4s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ================= LMS BUTTON ================= */
+.lms-btn {
+  background: linear-gradient(135deg, #ff00c8, #007bff);
+  color: white !important;
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(255,0,200,0.4);
+}
+.lms-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0,140,255,0.7);
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 26px;
+  margin-left: 20px;
+  color: #ff00c8;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .mobile-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #1a002b, #0f0c29);
+    flex-direction: column;
+    padding: 30px 0;
+    display: none;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(255,0,200,0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .lms-btn {
+    padding: 12px 30px;
+  }
+}
+
+/* ================= SECTION FADE-IN ================= */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= LARGE SCREENS ================= */
+@media (min-width: 1600px) {
+  .nav-link {
+    font-size: 18px;
+  }
+  .logo-img {
+    height: 85px;
+  }
+}
+/* ================= ACTIVE LINK ================= */
+.nav-link.active {
+  background: linear-gradient(90deg, #ff00c8, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+}
+.nav-link.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, #ff00c8, #00bfff); /* underline stays visible */
+}

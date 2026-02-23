@@ -1,0 +1,110 @@
+/* ================= SECTION ================= */
+
+.testimonials-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+
+
+/* Container */
+.testimonials-container {
+  width:90%;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.testimonials-container h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #ff00c8, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= SLIDER ================= */
+
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  padding:50px 0;
+  gap: 40px;
+  width: max-content;
+  animation: scrollLeft 28s linear infinite;
+}
+
+/* Pause animation on hover */
+.testimonial-slider:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* Infinite Scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= CARD ================= */
+
+.testimonial-card {
+  min-width: 250px;
+  max-width: 280px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 0, 200, 0.2);
+  text-align: left;
+  transition: 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #ff00c8, 0 0 40px #00bfff;
+}
+
+/* Stars */
+.stars {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+/* Message */
+.testimonial-message {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* User */
+.testimonial-user h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.testimonial-user span {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 280px;
+  }
+}
