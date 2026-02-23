@@ -56,7 +56,7 @@ const Header = () => {
           {['home','about','services','projects','testimonials','contact','lms'].map(section => (
             <li key={section}>
               <a
-                href={`#${section}`}
+                href={`/${section}`}
                 className={`nav-link ${activeSection === `#${section}` ? 'active' : ''} ${section==='lms' ? 'lms-btn' : ''}`}
                 onClick={(e) => handleNavClick(e, `#${section}`)}
               >

@@ -26,8 +26,8 @@ const Home = () => {
         </p>
 
         <div className="hero-buttons">
-          <a href="#services"><button className="primary-btn">Explore Services</button></a>
-          <a href="#contact"><button className="secondary-btn">Contact Us</button></a>
+          <a href="/services"><button className="primary-btn">Explore Services</button></a>
+          <a href="/contact"><button className="secondary-btn">Contact Us</button></a>
         </div>
       </div>
     </section>
