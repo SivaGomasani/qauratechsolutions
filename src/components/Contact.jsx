@@ -24,7 +24,7 @@ const Contact = () => {
       return;
     }
 
-    const whatsappNumber = "917093782135"; // Use primary number
+    const whatsappNumber = "916281485302"; // Use primary number
     const text = `Hello QAura Tech Solutions,%0A
 Name: ${name}%0A
 Phone: ${phone}%0A

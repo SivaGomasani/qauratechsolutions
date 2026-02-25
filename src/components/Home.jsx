@@ -14,16 +14,16 @@ const Home = () => {
       </div>
 
       <div className="hero-content">
-        <h1>
-          Shape Your Future <br />
-          with <span className="gradient-text">QAura Tech Solutions</span>
-        </h1>
+       <h1>
+        Build. Innovate. Dominate. <br />
+        with <span className="gradient-text">QAura Tech Solutions</span>
+      </h1>
 
-        <p>
-          Empowering students, job seekers, and professionals with
-          cutting-edge digital solutions, career guidance, and powerful
-          branding strategies.
-        </p>
+      <p>
+        We transform ambitious learners into industry-ready professionals through 
+        AI innovation, real-time projects, full-stack mastery, and strategic 
+        career acceleration programs.
+      </p>
 
         <div className="hero-buttons">
           <a href="/services"><button className="primary-btn">Explore Services</button></a>
