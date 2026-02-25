@@ -32,7 +32,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/qauratechsolutions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram /></a>
             <a href="https://www.linkedin.com/company/quaratech-solutions" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
             <a href="https://www.youtube.com/@QAuraTechSolutions"><FaYoutube /></a>
-            <a href="https://wa.me/916281485302" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a><a href="qauratechsolutions@gmail.com"><FaEnvelope /></a>
+            <a href="https://wa.me/916281485302" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a><a href="mailto:qauratechsolutions@gmail.com"><FaEnvelope /></a>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
