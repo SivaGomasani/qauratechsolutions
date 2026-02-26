@@ -52,16 +52,28 @@ const Header = () => {
           <img src={logo} alt="Qaura Tech Solutions" className="logo-img" />
         </a>
 
-        <ul className={isMobile ? "nav-menu active" : "nav-menu"}>
+       <ul className={isMobile ? "nav-menu active" : "nav-menu"}>
           {['home','about','services','projects','testimonials','contact','lms'].map(section => (
             <li key={section}>
-              <a
-                href={`/${section}`}
-                className={`nav-link ${activeSection === `#${section}` ? 'active' : ''} ${section==='lms' ? 'lms-btn' : ''}`}
-                onClick={(e) => handleNavClick(e, `#${section}`)}
-              >
-                {section === 'lms' ? 'LMS Portal' : section.charAt(0).toUpperCase() + section.slice(1)}
-              </a>
+              {section === "lms" ? (
+                <a
+                  href="https://qauratechacadamy.qauratechsolutions.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link lms-btn"
+                  onClick={() => setIsMobile(false)}
+                >
+                  LMS Portal
+                </a>
+              ) : (
+                <a
+                  href={`#${section}`}
+                  className={`nav-link ${activeSection === `#${section}` ? 'active' : ''}`}
+                  onClick={(e) => handleNavClick(e, `#${section}`)}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              )}
             </li>
           ))}
         </ul>
