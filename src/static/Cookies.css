@@ -1,0 +1,113 @@
+.cookies-section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  z-index: 2000;
+  transition: width 0.2s ease;
+}
+
+.cookies-container {
+  max-width: 900px;
+  width: 100%;
+  animation: fadePage 1s ease;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cookies-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cookies-date {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.cookies-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s ease;
+}
+
+.cookies-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #2575fc;
+  box-shadow: 0 10px 30px rgba(37, 117, 252, 0.3);
+}
+
+.cookies-card h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.cookies-card p {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.back-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: #2575fc;
+  transform: translateX(-5px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.legal-note {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .cookies-title {
+    font-size: 28px;
+  }
+}

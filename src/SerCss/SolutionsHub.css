@@ -1,0 +1,174 @@
+/* ================= MAIN SECTION ================= */
+
+.solutions-hub-section {
+  padding: 120px 8%;
+  position: relative;
+}
+
+/* ================= HEADER ================= */
+
+.solutions-hub-header {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.solutions-hub-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 20px;
+}
+
+.solutions-hub-header h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.solutions-hub-header h2 span {
+  background: linear-gradient(90deg, #ff00c8, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solutions-hub-header p {
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ================= GRID ================= */
+
+.solutions-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* ================= CARD BASE ================= */
+
+.solutions-hub-card {
+  position: relative;
+  padding: 35px 30px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  z-index: 1;
+}
+
+/* ================= GRADIENT BORDER ================= */
+
+.solutions-hub-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1.5px;
+  background: linear-gradient(135deg, #ff00c8, #00bfff);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+/* ================= INNER LIGHT GLOW ================= */
+
+.solutions-hub-card::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,0,200,0.15), transparent 70%);
+  top: var(--cursor-y);
+  left: var(--cursor-x);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+/* ================= HOVER EFFECT ================= */
+
+.solutions-hub-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(255, 0, 200, 0.3);
+}
+
+.solutions-hub-card:hover::before {
+  opacity: 1;
+}
+
+.solutions-hub-card:hover::after {
+  opacity: 1;
+}
+
+/* ================= ICON ================= */
+
+.solutions-hub-icon {
+  font-size: 36px;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease;
+}
+
+.solutions-hub-card:hover .solutions-hub-icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+/* ================= TEXT ================= */
+
+.solutions-hub-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.solutions-hub-card p {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ================= CTA ================= */
+
+.solutions-hub-cta {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.solutions-hub-card:hover .solutions-hub-cta {
+  letter-spacing: 1.5px;
+  transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .solutions-hub-header h2 {
+    font-size: 32px;
+  }
+
+  .solutions-hub-card {
+    padding: 28px 22px;
+  }
+
+  .solutions-hub-grid {
+    gap: 25px;
+  }
+}

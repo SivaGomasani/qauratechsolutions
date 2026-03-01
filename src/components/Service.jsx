@@ -1,5 +1,5 @@
 import React from "react";
-import "../static/Services.css";
+import "../static/Service.css";
 
 import {
   FaBrain,
@@ -71,7 +71,7 @@ const servicesData = [
   }
 ];
 
-const Services = () => {
+const Service = () => {
   return (
     <section className="services-section" id="services">
       <div className="services-container">
@@ -111,4 +111,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Service;

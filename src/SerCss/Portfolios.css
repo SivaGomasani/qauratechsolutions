@@ -1,0 +1,260 @@
+/* Google Font (Optional but Recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-section {
+  position: relative;
+  min-height: 100vh;
+
+  color: #fff;
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+
+/* =========================
+   Animated Background Glow
+========================= */
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.portfolio-hero {
+  text-align: center;
+  padding: 150px 20px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.portfolio-hero h1 span {
+  background: linear-gradient(90deg, #ff00cc, #2575fc, #ff00cc);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.portfolio-hero p {
+  max-width: 650px;
+  margin: 25px auto;
+  font-size: 18px;
+  color: #d0d0d0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.primary-btn {
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #ff00cc, #2575fc);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+}
+
+.primary-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 40px rgba(37, 117, 252, 0.7);
+}
+
+/* =========================
+   SECTION BLOCK
+========================= */
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-block {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.portfolio-block h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 35px;
+  margin-top: 60px;
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* =========================
+   GLASS CARD V2
+========================= */
+
+.glass-card {
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow border effect */
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 1px;
+  background: linear-gradient(90deg, #ff00cc, #2575fc);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glass-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 35px rgba(255, 0, 204, 0.5);
+}
+
+/* =========================
+   PRICING CARDS
+========================= */
+
+.pricing-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 70px;
+}
+
+.pricing-card {
+  padding: 50px 35px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.pricing-card h4 {
+  font-size: 42px;
+  margin: 20px 0;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff00cc, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #d0d0d0;
+}
+
+.pricing-card li {
+  margin: 12px 0;
+}
+
+.pricing-card button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(90deg, #ff00cc, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 45px rgba(37, 117, 252, 0.6);
+}
+
+/* POPULAR CARD */
+.popular {
+  transform: scale(1.05);
+  border: 2px solid #ff00cc;
+  box-shadow: 0 0 60px rgba(255, 0, 204, 0.6);
+}
+
+.popular-tag {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  background: linear-gradient(90deg, #ff00cc, #2575fc);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+  text-align: center;
+  margin-top: 150px;
+  padding: 60px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255,255,255,0.1);
+}

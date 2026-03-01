@@ -65,12 +65,12 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Legal</h3>
           <ul>
-            <li><a href="/">Terms & Conditions</a></li>
-            <li><a href="/">Privacy Policy</a></li>
-            <li><a href="/">Refund Policy</a></li>
-            <li><a href="/">Cancellation Policy</a></li>
-            <li><a href="/">Disclaimer</a></li>
-            <li><a href="/">Cookie Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+            <li><a href="/policy">Privacy Policy</a></li>
+            <li><a href="/refund">Refund Policy</a></li>
+            <li><a href="/cancel">Cancellation Policy</a></li>
+            <li><a href="/declaimer">Disclaimer</a></li>
+            <li><a href="/cookies">Cookie Policy</a></li>
           </ul>
         </div>
 
